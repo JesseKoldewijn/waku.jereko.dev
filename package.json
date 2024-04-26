@@ -1,0 +1,26 @@
+{
+	"name": "waku.jereko.dev",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "waku dev",
+		"build": "waku build",
+		"start": "waku start",
+		"upgrade:deps": "$npm_execpath install waku@latest react@canary react-dom@canary react-server-dom-webpack@canary tailwindcss@next @tailwindcss/postcss@next"
+	},
+	"dependencies": {
+		"react": "19.0.0-canary-e3ebcd54b-20240405",
+		"react-dom": "19.0.0-canary-e3ebcd54b-20240405",
+		"react-server-dom-webpack": "19.0.0-canary-e3ebcd54b-20240405",
+		"waku": "0.20.1"
+	},
+	"devDependencies": {
+		"@types/react": "npm:types-react@19.0.0-alpha.3",
+		"@types/react-dom": "npm:types-react@19.0.0-alpha.3",
+		"@tailwindcss/postcss": "4.0.0-alpha.14",
+		"postcss": "^8.4.38",
+		"tailwindcss": "4.0.0-alpha.14",
+		"typescript": "5.4.5"
+	}
+}
