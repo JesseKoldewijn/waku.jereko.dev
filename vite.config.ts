@@ -7,6 +7,9 @@ const config: UserConfig = {
 			"@": "/src",
 		},
 	},
+	esbuild: {
+		treeShaking: true,
+	},
 	build: {
 		minify: "esbuild",
 		rollupOptions: {
