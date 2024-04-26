@@ -1,7 +1,5 @@
 import { Link } from "waku";
 
-import { Counter } from "../components/counter";
-
 const HomePage = async () => {
 	const data = await getData();
 
@@ -11,8 +9,6 @@ const HomePage = async () => {
 			<h1 className="text-4xl font-bold tracking-tight">
 				{data.headline}
 			</h1>
-			<p>{data.body}</p>
-			<Counter />
 			<Link to="/about" className="mt-4 inline-block underline">
 				About page
 			</Link>
@@ -23,9 +19,8 @@ export default HomePage;
 
 const getData = async () => {
 	const data = {
-		title: "Waku",
-		headline: "Waku",
-		body: "Hello world!",
+		title: "Waku Jereko",
+		headline: "Waku Jereko",
 	};
 
 	return data;
