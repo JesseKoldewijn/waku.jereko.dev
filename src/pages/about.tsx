@@ -1,17 +1,18 @@
+import { Button } from "@/components/ui/button";
 import { Link } from "waku";
 
 const AboutPage = async () => {
 	const data = await getData();
 
 	return (
-		<div>
+		<div className="flex justify-center gap-3 flex-col">
 			<title>{data.title}</title>
 			<h1 className="text-4xl font-bold tracking-tight">
 				{data.headline}
 			</h1>
-			<Link to="/" className="mt-4 inline-block underline">
-				Return home
-			</Link>
+			<Button asChild className="w-max">
+				<Link to="/">Return home</Link>
+			</Button>
 		</div>
 	);
 };
