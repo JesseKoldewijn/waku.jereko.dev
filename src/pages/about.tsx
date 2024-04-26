@@ -7,7 +7,7 @@ const AboutPage = async () => {
 	return (
 		<div className="flex justify-center gap-3 flex-col">
 			<title>{data.title}</title>
-			<meta property="description" content={data.description} />
+			<meta name="description" content={data.description} />
 			<h1 className="text-4xl font-bold tracking-tight">
 				{data.headline}
 			</h1>
