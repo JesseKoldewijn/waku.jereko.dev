@@ -1,6 +1,6 @@
 import { Link } from "@/components/core/Link";
 
-export default function Page() {
+const Page = () => {
 	return (
 		<div className="demo-box flex flex-col gap-2">
 			<h2>
@@ -17,11 +17,12 @@ export default function Page() {
 				to="/view-transitions/2"
 				className="block [view-transition-name:link]"
 			>
-				Open page 2 →
+				Open Page 2 →
 			</Link>
 		</div>
 	);
-}
+};
+export default Page;
 
 export const getConfig = async () => {
 	return {

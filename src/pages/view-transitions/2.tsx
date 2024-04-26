@@ -1,6 +1,6 @@
 import { Link } from "@/components/core/Link";
 
-export default function Page() {
+const Page = () => {
 	return (
 		<div className="demo-box flex flex-col gap-2">
 			<h2>
@@ -21,7 +21,8 @@ export default function Page() {
 			</Link>
 		</div>
 	);
-}
+};
+export default Page;
 
 export const getConfig = async () => {
 	return {
