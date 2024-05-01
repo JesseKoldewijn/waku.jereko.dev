@@ -11,7 +11,7 @@ const Page = () => {
 			<section className="pb-1 lg:text-center max-w-md text-balance flex flex-col gap-4">
 				<div className="flex flex-col gap-1">
 					To use the View Transitions API, you need to use the
-					<code className="px-2 py-1 bg-accent-foreground lg:mx-auto">
+					<code className="px-2 py-1 bg-accent text-primary-foreground dark:bg-accent dark:text-primary lg:mx-auto">
 						document.startViewTransition
 					</code>
 					function. Using this function, you need to swap out the page
@@ -26,12 +26,12 @@ const Page = () => {
 					You'll probably want to use this API in combination with
 					some more advanced logic to also animate specific elements
 					on the page. For example, you could use the
-					<code className="px-2 py-1 bg-accent-foreground lg:mx-auto">
+					<code className="px-2 py-1 bg-accent text-primary-foreground dark:bg-accent dark:text-primary lg:mx-auto">
 						view-transition-name
 					</code>
 					CSS attribute to animate specific elements on the page. With
 					TailwindCSS you can inline this CSS attribute like this:
-					<code className="px-2 py-1 bg-accent-foreground lg:mx-auto">
+					<code className="px-2 py-1 bg-accent text-primary-foreground dark:bg-accent dark:text-primary lg:mx-auto">
 						&lt;div class="[view-transition-name=some_name]"&gt;
 					</code>
 					To read more about this, check out the MDN docs:{" "}

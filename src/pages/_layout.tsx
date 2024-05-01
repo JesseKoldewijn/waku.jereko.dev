@@ -6,9 +6,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { serverGetHostUrl } from "@/server/utils/context";
 import { getContext } from "waku/server";
-import { Theme } from "@/middleware/cookie";
 import { cn } from "@/utils/cn";
 import { ViewTransitions } from "@/providers/ViewTransitions";
+import { Theme } from "@/types/theme";
 
 interface RootLayoutProps {
 	children: ReactNode;
@@ -40,7 +40,8 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 
 	return (
 		<ViewTransitions>
-			<div
+			<main
+				data-app-root
 				className={cn(
 					ctx.theme === "dark" ? "dark" : "",
 					"inset-0 w-full min-h-screen h-full font-sans bg-background text-foreground "
@@ -56,7 +57,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 					{children}
 				</main>
 				<Footer />
-			</div>
+			</main>
 		</ViewTransitions>
 	);
 };

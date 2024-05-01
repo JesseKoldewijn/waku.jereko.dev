@@ -3,7 +3,6 @@ import * as cookie from "cookie";
 import type { Middleware } from "waku/config";
 
 export const themeCookieKey = "waku-jereko-theme";
-export type Theme = "light" | "dark";
 
 const cookieMiddleware: Middleware = () => {
 	return async (ctx, next) => {
@@ -25,7 +24,7 @@ const cookieMiddleware: Middleware = () => {
 			...origSetCookie,
 			cookie.serialize(themeCookieKey, String(ctx.context.theme), {
 				maxAge: 60 * 60 * 24 * 7,
-				httpOnly: true,
+				httpOnly: false,
 				sameSite: "lax",
 				path: "/",
 			}),

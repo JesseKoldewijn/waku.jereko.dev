@@ -53,8 +53,4 @@ function manualChunks(id: string) {
 	if (id.includes("react-dom")) {
 		return "react-dom";
 	}
-
-	if (id.includes("lucide")) {
-		return "lucide";
-	}
 }
