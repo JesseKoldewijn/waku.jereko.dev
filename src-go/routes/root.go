@@ -27,7 +27,7 @@ func routeGroupApi(router *gin.Engine) {
 	apiGroup := router.Group("/api")
 	// path: /
 	apiGroup.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 			"message": "Welcome to the Jereko API!",
 		})
 	})

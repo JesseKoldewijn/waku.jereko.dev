@@ -1,6 +1,8 @@
 package utils
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/mileusna/useragent"
 )
@@ -15,7 +17,7 @@ func RouteGroupUtils(router *gin.RouterGroup) {
 			uaString := c.Request.Header.Get("User-Agent")
 			uaParsed := useragent.Parse(uaString)
 
-			c.JSON(200, gin.H{
+			c.JSON(http.StatusOK, gin.H{
 				"ip":       ip,
 				"os":       uaParsed.OS,
 				"browser":  uaParsed.Name,

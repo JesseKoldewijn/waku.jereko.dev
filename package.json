@@ -4,7 +4,9 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"dev": "waku dev",
+		"dev": "concurrently -n web,api -c green,blue \"$npm_execpath run dev:web\" \"$npm_execpath run dev:api\"",
+		"dev:web": "waku dev",
+		"dev:api": "cd ./src-go && air",
 		"build": "waku build",
 		"start": "waku start",
 		"upgrade:deps": "$npm_execpath install waku@latest react@beta react-dom@beta react-server-dom-webpack@beta tailwindcss@next @tailwindcss/postcss@next"
@@ -28,6 +30,7 @@
 		"@types/node": "^20.12.7",
 		"@types/react": "npm:types-react@19.0.0-alpha.3",
 		"@types/react-dom": "npm:types-react@19.0.0-alpha.3",
+		"concurrently": "^8.2.2",
 		"postcss": "^8.4.38",
 		"tailwindcss": "4.0.0-alpha.14",
 		"typescript": "5.4.5",
