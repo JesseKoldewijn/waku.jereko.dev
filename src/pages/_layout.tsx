@@ -30,6 +30,14 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 		return false;
 	});
 
+	const childrenIncludesTitle = Array(children).some((child) => {
+		if (isValidElement(child)) {
+			const childProps = child.props as Record<string, unknown>;
+			return child.type === "title" && childProps?.children;
+		}
+		return false;
+	});
+
 	return (
 		<ViewTransitions>
 			<div
@@ -39,6 +47,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 				)}
 			>
 				<link rel="icon" type="image/png" href={data.icon} />
+				{!childrenIncludesTitle && <title>Waku Jereko</title>}
 				{!childrenIncludesDescription && (
 					<meta name="description" content={data.description} />
 				)}

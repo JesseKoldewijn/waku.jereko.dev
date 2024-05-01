@@ -8,7 +8,7 @@ export const Header = () => {
 			</h2>
 			<nav className="flex gap-4 ml-auto">
 				<Link to="/about">About</Link>
-				<Link to="/view-transitions/1">View Transitions</Link>
+				<Link to="/view-transitions">View Transitions</Link>
 			</nav>
 		</header>
 	);

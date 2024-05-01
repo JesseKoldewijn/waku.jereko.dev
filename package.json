@@ -7,17 +7,17 @@
 		"dev": "waku dev",
 		"build": "waku build",
 		"start": "waku start",
-		"upgrade:deps": "$npm_execpath install waku@latest react@canary react-dom@canary react-server-dom-webpack@canary tailwindcss@next @tailwindcss/postcss@next"
+		"upgrade:deps": "$npm_execpath install waku@latest react@beta react-dom@beta react-server-dom-webpack@beta tailwindcss@next @tailwindcss/postcss@next"
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "^1.0.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
 		"cookie": "^0.6.0",
-		"lucide-react": "^0.374.0",
-		"react": "19.0.0-canary-4c12339ce-20240408",
-		"react-dom": "19.0.0-canary-4c12339ce-20240408",
-		"react-server-dom-webpack": "19.0.0-canary-4c12339ce-20240408",
+		"lucide-react": "^0.376.0",
+		"react": "19.0.0-beta-4508873393-20240430",
+		"react-dom": "19.0.0-beta-4508873393-20240430",
+		"react-server-dom-webpack": "19.0.0-beta-4508873393-20240430",
 		"tailwind-merge": "^2.3.0",
 		"tailwindcss-animate": "^1.0.7",
 		"waku": "0.20.1"
@@ -31,7 +31,7 @@
 		"postcss": "^8.4.38",
 		"tailwindcss": "4.0.0-alpha.14",
 		"typescript": "5.4.5",
-		"vercel": "^34.1.4",
+		"vercel": "^34.1.7",
 		"vite": "^5.2.10"
 	},
 	"volta": {
