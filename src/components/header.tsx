@@ -1,4 +1,4 @@
-import { Link } from "waku";
+import { Link } from "./core/Link";
 
 export const Header = () => {
 	return (
