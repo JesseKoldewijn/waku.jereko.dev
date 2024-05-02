@@ -43,7 +43,6 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       <main
         data-app-root
         className={cn(
-          ctx.theme === "dark" ? "dark" : "",
           "bg-background text-foreground inset-0 h-full min-h-screen w-full font-sans ",
         )}
       >
