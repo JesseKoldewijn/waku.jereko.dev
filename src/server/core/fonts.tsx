@@ -91,7 +91,7 @@ const FontMapping = ({ browser, ue }: { browser: string; ue: string }) => {
       return (
         <link
           key={index}
-          rel={canPreload ? "preload" : "prefetch"}
+          rel={canPreload ? "font preload prefetch" : "font prefetch"}
           as="font"
           type={fontData.type}
           href={fontData.src}

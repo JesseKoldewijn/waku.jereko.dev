@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities" layer(utilities);
 
 @layer base {
   :root {
