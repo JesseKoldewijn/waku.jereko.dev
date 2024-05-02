@@ -2,6 +2,7 @@ package v1
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,6 +14,12 @@ func RouteGroupV1(router *gin.RouterGroup) {
 		v1.GET("/", func(c *gin.Context) {
 			c.JSON(http.StatusOK, gin.H{
 				"message": "Welcome to the v1 root!",
+			})
+		})
+		v1.GET("/timestamp", func(c *gin.Context) {
+			now := time.Now().UTC();
+			c.JSON(http.StatusOK, gin.H{
+				"timestamp": now,
 			})
 		})
 		v1.POST("/echo", func(c *gin.Context) {

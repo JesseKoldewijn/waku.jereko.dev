@@ -15,11 +15,11 @@ const Page = () => {
         : `https://${vercelUrl}`
       : undefined;
 
-  const remoteUrl = actualUrl ? `${actualUrl}/api/v1/` : undefined;
+  const remoteUrl = actualUrl ? `${actualUrl}/api/v1/timestamp` : undefined;
   return (
-    <div className="demo-box flex flex-col gap-4 lg:items-center">
-      <h2 className="text-xl font-semibold lg:mx-auto">View Transitions</h2>
-      <section className="flex max-w-md flex-col gap-4 text-balance pb-1 lg:text-center">
+    <div className="demo-box flex w-full flex-col items-center gap-4">
+      <h2 className="mx-auto text-xl font-semibold">View Transitions</h2>
+      <section className="flex max-w-md flex-col gap-4 text-balance pb-1 text-center">
         <ActionTransitionDemo remoteUrl={remoteUrl} />
       </section>
       <Button asChild className="mx-auto w-max">

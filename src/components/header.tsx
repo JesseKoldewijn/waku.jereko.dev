@@ -13,7 +13,7 @@ export const Header = () => {
       <h2 className="text-lg font-bold tracking-tight">
         <Link to="/">Waku Jereko</Link>
       </h2>
-      <nav className="pointer-events-none hidden gap-4 lg:flex">
+      <nav className="pointer-events-none hidden gap-4 lg:pointer-events-auto lg:flex">
         <Link to="/about">About</Link>
         <Link to="/actions">Actions</Link>
         <Link to="/view-transitions">View Transitions</Link>

@@ -13,12 +13,16 @@ func RouteGroupUtils(router *gin.RouterGroup) {
 	{
 		utils.GET("/ip", func(c *gin.Context) {
 			ip := c.ClientIP()
+			ref := c.Request.Header.Get("Referer")
+			requestIp := c.Request.Header.Get("X-Real-IP")
 
 			uaString := c.Request.Header.Get("User-Agent")
 			uaParsed := useragent.Parse(uaString)
 
 			c.JSON(http.StatusOK, gin.H{
 				"ip":       ip,
+				"requestIp": requestIp,
+				"referer":  ref,
 				"os":       uaParsed.OS,
 				"browser":  uaParsed.Name,
 				"isMobile": uaParsed.Mobile,
