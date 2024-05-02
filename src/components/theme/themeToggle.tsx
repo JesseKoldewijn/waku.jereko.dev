@@ -28,7 +28,7 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
 
     setTheme(newTheme);
 
-    const appRoot = document.querySelector("[data-app-root='true']");
+    const appRoot = document.querySelector("html");
 
     if (appRoot) {
       if (newTheme === "dark") {

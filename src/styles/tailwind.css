@@ -2,7 +2,7 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-  main {
+  :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 

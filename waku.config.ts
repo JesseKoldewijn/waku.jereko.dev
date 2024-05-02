@@ -4,6 +4,7 @@ const DO_NOT_BUNDLE = "";
 export default {
   middleware: (cmd: "dev" | "start") => [
     import("./src/middleware/cookie.js"),
+    import("./src/middleware/themePreload.js"),
     ...(cmd === "dev"
       ? [
           import(
