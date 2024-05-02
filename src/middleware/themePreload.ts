@@ -14,7 +14,6 @@ const cookieMiddleware: Middleware = () => {
     const lang = "en-US";
 
     if (isDocument) {
-      // documentContent is ReadableStream<any>
       const documentContent = ctx.res.body;
 
       const newDocumentContent = documentContent?.pipeThrough(
