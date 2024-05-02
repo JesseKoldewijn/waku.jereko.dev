@@ -1,8 +1,10 @@
-import { type ReactNode, isValidElement } from "react";
+import { type ReactNode } from "react";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ViewTransitions } from "@/providers/ViewTransitions";
+import Fonts from "@/server/core/fonts";
+import Meta from "@/server/core/meta";
 import { serverGetHostUrl } from "@/server/utils/context";
 import "@/styles/tailwind.css";
 import { cn } from "@/utils/cn";
@@ -14,45 +16,24 @@ interface RootLayoutProps {
 const RootLayout = async ({ children }: RootLayoutProps) => {
   const data = await getData();
 
-  const childrenIncludesDescription = Array(children).some((child) => {
-    if (isValidElement(child)) {
-      const childProps = child.props as Record<string, unknown>;
-      return (
-        child.type === "meta" &&
-        childProps?.property &&
-        childProps?.property === "description"
-      );
-    }
-    return false;
-  });
-
-  const childrenIncludesTitle = Array(children).some((child) => {
-    if (isValidElement(child)) {
-      const childProps = child.props as Record<string, unknown>;
-      return child.type === "title" && childProps?.children;
-    }
-    return false;
-  });
-
   return (
     <ViewTransitions>
-      <main
+      <div
         data-app-root
         className={cn(
-          "bg-background text-foreground inset-0 h-full min-h-screen w-full font-sans ",
+          "bg-background text-foreground inset-0 h-full min-h-screen w-full",
         )}
       >
         <link rel="icon" type="image/png" href={data.icon} />
-        {!childrenIncludesTitle && <title>Waku Jereko</title>}
-        {!childrenIncludesDescription && (
-          <meta name="description" content={data.description} />
-        )}
+        <Fonts />
+        <Meta tree={children} desc={data?.description} />
+
         <Header />
-        <main className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
+        <div className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
           {children}
-        </main>
+        </div>
         <Footer />
-      </main>
+      </div>
     </ViewTransitions>
   );
 };

@@ -70,6 +70,10 @@
 }
 
 @theme {
+  --font-family-sans: "Geist", "Inter", "Poppins", system-ui, -apple-system,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif,
+    "Apple Color Emoji";
+
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
@@ -126,4 +130,8 @@
       height: "0";
     }
   }
+}
+
+:root {
+  @apply font-sans;
 }
