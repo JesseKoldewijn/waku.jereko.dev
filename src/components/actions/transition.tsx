@@ -15,8 +15,13 @@ const ActionTransitionDemo = ({ remoteUrl }: ActionTransitionDemoProps) => {
 
 	const handleSubmit = () => {
 		startTransition(async () => {
+			const url = window.location.href.includes("localhost")
+				? remoteUrl
+				: remoteUrl
+				? new URL(remoteUrl).pathname
+				: "/api/v1";
 			try {
-				const response = await fetch(remoteUrl, {
+				const response = await fetch(url, {
 					method: "GET",
 				});
 
