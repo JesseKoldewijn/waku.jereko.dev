@@ -1,18 +1,18 @@
 {
-	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"routes": [
-		{
-			"src": "/api/(.*)",
-			"dest": "api/index.go"
-		},
-		{
-			"src": "/api",
-			"dest": "api/index.go"
-		}
-	],
-	"build": {
-		"env": {
-			"GIN_MODE": "release"
-		}
-	}
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.go"
+    },
+    {
+      "src": "/api",
+      "dest": "api/index.go"
+    }
+  ],
+  "build": {
+    "env": {
+      "GIN_MODE": "release"
+    }
+  }
 }

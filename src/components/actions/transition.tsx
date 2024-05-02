@@ -2,60 +2,58 @@
 
 import { useState, useTransition } from "react";
 
+import { Button } from "../ui/button";
+
 interface ActionTransitionDemoProps {
-	remoteUrl: string | undefined;
+  remoteUrl: string | undefined;
 }
 
 const ActionTransitionDemo = ({ remoteUrl }: ActionTransitionDemoProps) => {
-	const [message, setMessage] = useState<string | null>(null);
-	const [error, setError] = useState<string | null>(null);
-	const [isPending, startTransition] = useTransition();
+  const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
 
-	if (!remoteUrl) return <p>Remote URL is not provided</p>;
+  if (!remoteUrl) return <p>Remote URL is not provided</p>;
 
-	const handleSubmit = () => {
-		startTransition(async () => {
-			const url = window.location.href.includes("localhost")
-				? remoteUrl
-				: remoteUrl
-				? new URL(remoteUrl).pathname
-				: "/api/v1";
-			try {
-				const response = await fetch(url, {
-					method: "GET",
-				});
+  const handleSubmit = () => {
+    startTransition(async () => {
+      try {
+        const url = new URL(remoteUrl);
 
-				if (!response.ok) {
-					setError(response.statusText);
-					return;
-				}
+        const response = await fetch(url, {
+          method: "GET",
+        });
 
-				const data = await response.json();
-				if (data.message) {
-					setMessage(data.message);
-				} else {
-					setMessage(
-						"No message received, received data: " +
-							JSON.stringify(data)
-					);
-				}
-			} catch (error) {
-				const err = error as Error;
-				setError(err.message);
-			}
-		});
-	};
+        if (!response.ok) {
+          setError(response.statusText);
+          return;
+        }
 
-	return (
-		<div>
-			<button onClick={handleSubmit} disabled={isPending}>
-				Update
-			</button>
-			{message && <p>{message}</p>}
-			{isPending && <p>Loading...</p>}
-			{error && <p>{error}</p>}
-		</div>
-	);
+        const data = await response.json();
+        if (data.message) {
+          setMessage(data.message);
+        } else {
+          setMessage(
+            "No message received, received data: " + JSON.stringify(data),
+          );
+        }
+      } catch (error) {
+        const err = error as Error;
+        setError(err.message);
+      }
+    });
+  };
+
+  return (
+    <div className="flex flex-col gap-4">
+      <Button onClick={handleSubmit} disabled={isPending}>
+        Update
+      </Button>
+      {message && <p>{message}</p>}
+      {isPending && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+    </div>
+  );
 };
 
 export default ActionTransitionDemo;
