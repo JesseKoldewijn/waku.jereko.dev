@@ -15,6 +15,7 @@ export const Header = () => {
       </h2>
       <nav className="pointer-events-none hidden gap-4 lg:pointer-events-auto lg:flex">
         <Link to="/about">About</Link>
+        <Link to="/nested">Nesting</Link>
         <Link to="/actions">Actions</Link>
         <Link to="/view-transitions">View Transitions</Link>
       </nav>
