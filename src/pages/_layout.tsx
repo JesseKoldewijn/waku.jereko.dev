@@ -1,13 +1,10 @@
 import { type ReactNode, isValidElement } from "react";
 
-import { getContext } from "waku/server";
-
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ViewTransitions } from "@/providers/ViewTransitions";
 import { serverGetHostUrl } from "@/server/utils/context";
 import "@/styles/tailwind.css";
-import { Theme } from "@/types/theme";
 import { cn } from "@/utils/cn";
 
 interface RootLayoutProps {
@@ -16,7 +13,6 @@ interface RootLayoutProps {
 
 const RootLayout = async ({ children }: RootLayoutProps) => {
   const data = await getData();
-  const ctx = getContext<{ theme: Theme }>();
 
   const childrenIncludesDescription = Array(children).some((child) => {
     if (isValidElement(child)) {
