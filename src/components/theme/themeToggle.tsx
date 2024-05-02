@@ -55,7 +55,11 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
         ref={ref}
         onClick={toggleTheme}
         defaultChecked={initialTheme == "dark"}
-      />
+      >
+        <span className="sr-only">
+          Use this button to toggle between themes
+        </span>
+      </Switch>
       <Label
         htmlFor="airplane-mode"
         className="hidden lg:flex lg:items-center lg:justify-center"
