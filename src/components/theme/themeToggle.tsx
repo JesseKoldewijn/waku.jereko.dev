@@ -51,21 +51,22 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
   return (
     <div className="flex items-center space-x-2 [view-transition-name:theme_toggle]">
       <Switch
-        id="airplane-mode"
+        id="theme-toggle"
         ref={ref}
         onClick={toggleTheme}
         defaultChecked={initialTheme == "dark"}
-      >
-        <span className="sr-only">
-          Use this button to toggle between themes
-        </span>
-      </Switch>
+        aria-labelledby="theme-toggle-label"
+        role="switch"
+      />
       <Label
-        htmlFor="airplane-mode"
+        htmlFor="theme-toggle"
         className="hidden lg:flex lg:items-center lg:justify-center"
       >
         {theme}-mode
       </Label>
+      <span id="theme-toggle-label" className="sr-only">
+        Toggle theme
+      </span>
     </div>
   );
 };
