@@ -22,9 +22,8 @@ const ActionTransitionDemo = ({ remoteUrl }: ActionTransitionDemoProps) => {
     startTransition(async () => {
       try {
         setTimeoutEnabled(true);
-        const url = new URL(remoteUrl);
 
-        const response = await fetch(url, {
+        const response = await fetch(remoteUrl, {
           method: "GET",
         });
 
