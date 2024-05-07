@@ -16,8 +16,12 @@ const Page = () => {
         : `https://${vercelUrl}`
       : undefined;
 
-  const remoteUrlTs = actualUrl ? `${actualUrl}/api/v1/timestamp` : undefined;
-  const remoteUrlEcho = actualUrl ? `${actualUrl}/api/v1/echo` : undefined;
+  const remoteUrlTs = actualUrl
+    ? `${!actualUrl.includes("vercel.app") && actualUrl}/api/v1/timestamp`
+    : undefined;
+  const remoteUrlEcho = actualUrl
+    ? `${!actualUrl.includes("vercel.app") && actualUrl}/api/v1/echo`
+    : undefined;
 
   return (
     <div className="flex w-full flex-col items-center gap-4">
@@ -46,6 +50,6 @@ export default Page;
 
 export const getConfig = async () => {
   return {
-    render: "static",
+    render: "dynamic",
   };
 };
