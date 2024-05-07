@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@radix-ui/react-label':
     specifier: ^2.0.2
-    version: 2.0.2(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
+    version: 2.0.2(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
   '@radix-ui/react-switch':
     specifier: ^1.0.3
-    version: 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
+    version: 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
   cookie:
     specifier: ^0.6.0
     version: 0.6.0
@@ -34,15 +34,18 @@ dependencies:
     version: 2.3.0
   tailwindcss-animate:
     specifier: ^1.0.7
-    version: 1.0.7(tailwindcss@4.0.0-alpha.14)
+    version: 1.0.7(tailwindcss@0.0.0-development.5)
   waku:
     specifier: 0.20.1
     version: 0.20.1(@types/node@20.12.10)(react-dom@19.0.0-beta-b498834eab-20240506)(react-server-dom-webpack@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)
 
 devDependencies:
+  '@tailwindcss/oxide':
+    specifier: 0.0.0-development.5
+    version: 0.0.0-development.5
   '@tailwindcss/postcss':
-    specifier: 4.0.0-alpha.14
-    version: 4.0.0-alpha.14(postcss@8.4.38)
+    specifier: 0.0.0-development.5
+    version: 0.0.0-development.5(postcss@8.4.38)
   '@trivago/prettier-plugin-sort-imports':
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.2.5)
@@ -59,8 +62,8 @@ devDependencies:
     specifier: npm:types-react@19.0.0-alpha.5
     version: /types-react@19.0.0-alpha.5
   '@types/react-dom':
-    specifier: npm:types-react@19.0.0-alpha.5
-    version: /types-react@19.0.0-alpha.5
+    specifier: npm:types-react-dom@19.0.0-alpha.5
+    version: /types-react-dom@19.0.0-alpha.5
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
@@ -86,14 +89,14 @@ devDependencies:
     specifier: ^0.5.14
     version: 0.5.14(@trivago/prettier-plugin-sort-imports@4.3.0)(prettier@3.2.5)
   tailwindcss:
-    specifier: 4.0.0-alpha.14
-    version: 4.0.0-alpha.14
+    specifier: 0.0.0-development.5
+    version: 0.0.0-development.5
   typescript:
     specifier: 5.4.5
     version: 5.4.5
   vercel:
-    specifier: ^34.1.7
-    version: 34.1.7
+    specifier: ^34.1.8
+    version: 34.1.8
   vite:
     specifier: 6.0.0-alpha.11
     version: 6.0.0-alpha.11(@types/node@20.12.10)
@@ -694,7 +697,7 @@ packages:
       react: 19.0.0-beta-b498834eab-20240506
     dev: false
 
-  /@radix-ui/react-label@2.0.2(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
+  /@radix-ui/react-label@2.0.2(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
     resolution: {integrity: sha512-N5ehvlM7qoTLx7nWPodsPYPgMzA5WM8zZChQg8nyFJKnDO5WHdba1vv5/H6IO5LtJMfD2Q3wh1qHFGNtK0w3bQ==}
     peerDependencies:
       '@types/react': '*'
@@ -708,14 +711,14 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.24.4
-      '@radix-ui/react-primitive': 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
+      '@radix-ui/react-primitive': 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
       '@types/react': /types-react@19.0.0-alpha.5
-      '@types/react-dom': /types-react@19.0.0-alpha.5
+      '@types/react-dom': /types-react-dom@19.0.0-alpha.5
       react: 19.0.0-beta-b498834eab-20240506
       react-dom: 19.0.0-beta-b498834eab-20240506(react@19.0.0-beta-b498834eab-20240506)
     dev: false
 
-  /@radix-ui/react-primitive@1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
+  /@radix-ui/react-primitive@1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
     resolution: {integrity: sha512-yi58uVyoAcK/Nq1inRY56ZSjKypBNKTa/1mcL8qdl6oJeEaDbOldlzrGn7P6Q3Id5d+SYNGc5AJgc4vGhjs5+g==}
     peerDependencies:
       '@types/react': '*'
@@ -731,7 +734,7 @@ packages:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-slot': 1.0.2(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
       '@types/react': /types-react@19.0.0-alpha.5
-      '@types/react-dom': /types-react@19.0.0-alpha.5
+      '@types/react-dom': /types-react-dom@19.0.0-alpha.5
       react: 19.0.0-beta-b498834eab-20240506
       react-dom: 19.0.0-beta-b498834eab-20240506(react@19.0.0-beta-b498834eab-20240506)
     dev: false
@@ -751,7 +754,7 @@ packages:
       react: 19.0.0-beta-b498834eab-20240506
     dev: false
 
-  /@radix-ui/react-switch@1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
+  /@radix-ui/react-switch@1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5):
     resolution: {integrity: sha512-mxm87F88HyHztsI7N+ZUmEoARGkC22YVW5CaC+Byc+HRpuvCrOBPTAnXgf+tZ/7i0Sg/eOePGdMhUKhPaQEqow==}
     peerDependencies:
       '@types/react': '*'
@@ -768,12 +771,12 @@ packages:
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-compose-refs': 1.0.1(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
       '@radix-ui/react-context': 1.0.1(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
-      '@radix-ui/react-primitive': 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
+      '@radix-ui/react-primitive': 1.0.3(react-dom@19.0.0-beta-b498834eab-20240506)(react@19.0.0-beta-b498834eab-20240506)(types-react-dom@19.0.0-alpha.5)(types-react@19.0.0-alpha.5)
       '@radix-ui/react-use-controllable-state': 1.0.1(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
       '@radix-ui/react-use-previous': 1.0.1(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
       '@radix-ui/react-use-size': 1.0.1(react@19.0.0-beta-b498834eab-20240506)(types-react@19.0.0-alpha.5)
       '@types/react': /types-react@19.0.0-alpha.5
-      '@types/react-dom': /types-react@19.0.0-alpha.5
+      '@types/react-dom': /types-react-dom@19.0.0-alpha.5
       react: 19.0.0-beta-b498834eab-20240506
       react-dom: 19.0.0-beta-b498834eab-20240506(react@19.0.0-beta-b498834eab-20240506)
     dev: false
@@ -1099,17 +1102,8 @@ packages:
       '@swc/counter': 0.1.3
     dev: false
 
-  /@tailwindcss/oxide-android-arm64@4.0.0-alpha.14:
-    resolution: {integrity: sha512-9ssgbWrn0VwcEtni5aBVrP/QXPWhpryXs4HJlqTz1HQTdjWHBF8bObBKxeixq3vVACLvjHm922jHirpvejiUYQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /@tailwindcss/oxide-darwin-arm64@4.0.0-alpha.14:
-    resolution: {integrity: sha512-TMbwZb2Jg5Xf0KtYRp0CoVzNdTrOGZkhPcdIPbqkHouzhtvynyd/iD6e4aCpm0RqPICg3MLguPu81kO3lEJu9g==}
+  /@tailwindcss/oxide-darwin-arm64@0.0.0-development.5:
+    resolution: {integrity: sha512-Hk/fX055719hMZ+97hR1XVxvoIcgrjhpEL1dI2ypUJRb5yFsMTM2GQ9f5SK8K8fYLHmbEoXX82xqHcBanbKWqw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -1117,8 +1111,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-darwin-x64@4.0.0-alpha.14:
-    resolution: {integrity: sha512-aOPlkpptgDmCRbbqqYYhotnFvVDMQ8x6VjRp2kDVNdEtzoCLClAjDutERIC7CGUusX796RvGPLgkKd8YWNi+8w==}
+  /@tailwindcss/oxide-darwin-x64@0.0.0-development.5:
+    resolution: {integrity: sha512-a/uf3j7x78E8flEeqXLoLw0M/q7VLUR02CW46y1dX9Ui5dlQNihy2Jk8mEsBaYQR8hpGF+q8a5AtN8ML9N0GYg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -1126,8 +1120,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-freebsd-x64@4.0.0-alpha.14:
-    resolution: {integrity: sha512-YVgGduxowoA0qqTvsMZLfTAVm7mwwixlyuTTDyoQiQc4gXm3HhIamFTEiAY9xafUZysbdPMs+ITxXFb22SxIUg==}
+  /@tailwindcss/oxide-freebsd-x64@0.0.0-development.5:
+    resolution: {integrity: sha512-Ql/NYoOre9MJUx+zZyZmyLaQdNrEc49YwTV7ywXrqJrMR1aXzD7j7gsARuLQBiJElINPhWNdRkdWLsvTmhhIQw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -1135,8 +1129,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-linux-arm-gnueabihf@4.0.0-alpha.14:
-    resolution: {integrity: sha512-avhbIj1rsXX5VSGlv29wdbNumPjPz86IBmbTRbAbXV6PRqGIDPika/0TZGo3IDAaevsXU2xc1HkVqBeZ/Hj5AQ==}
+  /@tailwindcss/oxide-linux-arm-gnueabihf@0.0.0-development.5:
+    resolution: {integrity: sha512-oCylKyNB5dVYeCMTVMaek+cXtc7n8P8yLzopSYfAbxLn0oZjeYVqT0qa6+i5EUd8pqPrqcIO0i7i5fUenfbFFg==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -1144,8 +1138,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-linux-arm64-gnu@4.0.0-alpha.14:
-    resolution: {integrity: sha512-NQKcFIb3xii3CSusisWR/0EH1sJfvF6I90XGi+geTdHXv77bU/McpMshrtPMcMHkbQqVlJbnJ2ttDN+zae3lcA==}
+  /@tailwindcss/oxide-linux-arm64-gnu@0.0.0-development.5:
+    resolution: {integrity: sha512-Q5q3wdSoMgqYm3A6HxAAl9x+XPVnwFkhkpqvAgqmc9DUW2mrQRjJ+pJI2qDaA8jfC/Yw9CCa9daeidpDbnYzBg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1153,8 +1147,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-linux-arm64-musl@4.0.0-alpha.14:
-    resolution: {integrity: sha512-bUYWc/jA5Kx2pESuGO7gRA5L1Hy/Jo8/ERbs/Pq5aXdNN+lllh4OEKCCjb02GSQvj7jsmPt8OAJifcur7sYUdg==}
+  /@tailwindcss/oxide-linux-arm64-musl@0.0.0-development.5:
+    resolution: {integrity: sha512-MLLcvetPV45QP3AvA+gBtlM4qjqm1RUxIZl8g43EdE05odNuXIj4FyE5qlsAOe/1Zq8CFYNeQS3JEMJ+ZHPofA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1162,8 +1156,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-linux-x64-gnu@4.0.0-alpha.14:
-    resolution: {integrity: sha512-+FCUYOLBU9KTCxAY2NNfVgsvJ1dbNfTuhV13iIsrXTuEvu/P69H8YJzoiNB5oTPPgrKnClVj/KWw9n+GycHvEQ==}
+  /@tailwindcss/oxide-linux-x64-gnu@0.0.0-development.5:
+    resolution: {integrity: sha512-COKXed57IED0t3xizptD1ZpN3WBhgQveCF7k9DRPxyQmvowI2A7lWZSwOFlbO5HAkAFHqhjYGrECkJT3skoFmA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1171,8 +1165,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-linux-x64-musl@4.0.0-alpha.14:
-    resolution: {integrity: sha512-zl3iXwC1of+7pCyByIvYpQ88JZrwfWT0dETfJHuWYSuO8NSjU93oQHFV79UZTYqD9XkUevrQBNQCd5s5/7QS8g==}
+  /@tailwindcss/oxide-linux-x64-musl@0.0.0-development.5:
+    resolution: {integrity: sha512-kW/qE2orgBjnko8U9LZZv+HK4qoIzxOSCsnroV4J/wFF69RV89eXXPwzYJfJehcSZbBeCzpCBsvpTg2586THSg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1180,8 +1174,8 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide-win32-x64-msvc@4.0.0-alpha.14:
-    resolution: {integrity: sha512-IKaiQO/XxpuCv7ZpVngMaJEoswCqM7ncByHY68YRXkNH1tBVJl1H2Hz/jej7ziBlvEDvBY4qFgeJJAhh/tOiMQ==}
+  /@tailwindcss/oxide-win32-x64-msvc@0.0.0-development.5:
+    resolution: {integrity: sha512-N/w9X6pRQRx/5Xpqwl6ZtVxES9Rj2wUfkOg0zfjDgZYZzPW5ROJ5yJtuRAXlk1y86286s1PJ8Z+pYHgIPlHeWw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -1189,29 +1183,27 @@ packages:
     dev: true
     optional: true
 
-  /@tailwindcss/oxide@4.0.0-alpha.14:
-    resolution: {integrity: sha512-KpYsgwFd1I9UeqoCtBF62KXYKkp1RuxJm26M0EGTHVvUV+Cln0KZaouKJ1/7mqH8hD/TrzIwX5cGVMb2ShM4Qg==}
+  /@tailwindcss/oxide@0.0.0-development.5:
+    resolution: {integrity: sha512-mGycFeuX7yIccGIADmjtw28bjIOkG0nao12Y3CaOyvctxZUBg0wgvdYPs4T1PXx7+Z/5ErAYqaGjMTTAeVpGXg==}
     engines: {node: '>= 10'}
     optionalDependencies:
-      '@tailwindcss/oxide-android-arm64': 4.0.0-alpha.14
-      '@tailwindcss/oxide-darwin-arm64': 4.0.0-alpha.14
-      '@tailwindcss/oxide-darwin-x64': 4.0.0-alpha.14
-      '@tailwindcss/oxide-freebsd-x64': 4.0.0-alpha.14
-      '@tailwindcss/oxide-linux-arm-gnueabihf': 4.0.0-alpha.14
-      '@tailwindcss/oxide-linux-arm64-gnu': 4.0.0-alpha.14
-      '@tailwindcss/oxide-linux-arm64-musl': 4.0.0-alpha.14
-      '@tailwindcss/oxide-linux-x64-gnu': 4.0.0-alpha.14
-      '@tailwindcss/oxide-linux-x64-musl': 4.0.0-alpha.14
-      '@tailwindcss/oxide-win32-x64-msvc': 4.0.0-alpha.14
+      '@tailwindcss/oxide-darwin-arm64': 0.0.0-development.5
+      '@tailwindcss/oxide-darwin-x64': 0.0.0-development.5
+      '@tailwindcss/oxide-freebsd-x64': 0.0.0-development.5
+      '@tailwindcss/oxide-linux-arm-gnueabihf': 0.0.0-development.5
+      '@tailwindcss/oxide-linux-arm64-gnu': 0.0.0-development.5
+      '@tailwindcss/oxide-linux-arm64-musl': 0.0.0-development.5
+      '@tailwindcss/oxide-linux-x64-gnu': 0.0.0-development.5
+      '@tailwindcss/oxide-linux-x64-musl': 0.0.0-development.5
+      '@tailwindcss/oxide-win32-x64-msvc': 0.0.0-development.5
     dev: true
 
-  /@tailwindcss/postcss@4.0.0-alpha.14(postcss@8.4.38):
-    resolution: {integrity: sha512-yDg66USPsVPd9rKTmUx57KaY611U4ifk3799dMGfp7EsPLgyQPgNphGsuNuvyjD0ATQ9JXEX4oIoclm4rLxN7Q==}
+  /@tailwindcss/postcss@0.0.0-development.5(postcss@8.4.38):
+    resolution: {integrity: sha512-dUTRP7SJVK0AjTN9kvX0anG4QjELSFcoQhQ3ll9umjJ6L3u6MsDqMlWea3nmcbOC9t9h5vPJjohCY+D7DkZAmA==}
     dependencies:
-      '@tailwindcss/oxide': 4.0.0-alpha.14
-      lightningcss: 1.24.1
+      '@tailwindcss/oxide': 0.0.0-development.5
       postcss-import: 16.1.0(postcss@8.4.38)
-      tailwindcss: 4.0.0-alpha.14
+      tailwindcss: 0.0.0-development.5
     transitivePeerDependencies:
       - postcss
     dev: true
@@ -1332,6 +1324,15 @@ packages:
     dependencies:
       undici-types: 5.26.5
 
+  /@types/prop-types@15.7.12:
+    resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
+
+  /@types/react@18.3.1:
+    resolution: {integrity: sha512-V0kuGBX3+prX+DQ/7r2qsv1NsdfnCLnTgnRJ1pYnxykBhGMz+qj+box5lq7XsO5mtZsBqpjwwTu/7wszPfMBcw==}
+    dependencies:
+      '@types/prop-types': 15.7.12
+      csstype: 3.1.3
+
   /@vercel/build-utils@8.0.0:
     resolution: {integrity: sha512-6vOiAVFA/Uu4+uV3f751rcXgfKVHrgBQFKXwvPTczl1q0djvCHsQDngl1ccu1NSyWSzdem3YhhDkLOUMHLN3xA==}
     dev: true
@@ -1397,8 +1398,8 @@ packages:
       ts-morph: 12.0.0
     dev: true
 
-  /@vercel/next@4.2.6:
-    resolution: {integrity: sha512-NoqtXtfoODtxG8ZyJtJbZEKCfzOUyW8xvV9Ya0laQLtH94lc0m9xhwpJLDFrqU/Jy/tP1YIS+qnT4XNxUhb4wQ==}
+  /@vercel/next@4.2.7:
+    resolution: {integrity: sha512-twZaOXWmBKxs/S7Os56aQ8Ps7xNO6vhfesAym5XMHHuAA2Z+H2461uZFQnLP4HtKtEW/7g0AzJqlfWF2otVL9A==}
     dependencies:
       '@vercel/nft': 0.26.4
     transitivePeerDependencies:
@@ -1497,8 +1498,8 @@ packages:
     resolution: {integrity: sha512-UZYwlSEEfVnfzTmgkD+kxex9/gkZGt7unOWNyWFN7V/ZnZSsGBUgv6hXLnwejdRi3EztgRQEBd1kUKlXdIeC0Q==}
     dev: true
 
-  /@vercel/static-build@2.5.2:
-    resolution: {integrity: sha512-KAVc5UWkpTPmO7O7gTNPxfpYoW4InaaJODKK+Zn4STLHXSIPJwEp8e/2Mxh/Yll8C28V0o8y7SzOSm4VwrYFXA==}
+  /@vercel/static-build@2.5.3:
+    resolution: {integrity: sha512-xP9qwZHd6ymCbDStsHiAFjlX7UZh8+fNdkVEM2MOU0pdgosy7/3GqS4nfRZ5RuLcgOXRhR4GnObox0GYq7GhaA==}
     dependencies:
       '@vercel/gatsby-plugin-vercel-analytics': 1.0.11
       '@vercel/gatsby-plugin-vercel-builder': 2.0.26
@@ -2062,7 +2063,6 @@ packages:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
     hasBin: true
-    dev: true
 
   /detect-libc@2.0.3:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
@@ -2795,7 +2795,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-darwin-x64@1.24.1:
@@ -2804,7 +2803,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-freebsd-x64@1.24.1:
@@ -2813,7 +2811,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-linux-arm-gnueabihf@1.24.1:
@@ -2822,7 +2819,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-linux-arm64-gnu@1.24.1:
@@ -2831,7 +2827,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-linux-arm64-musl@1.24.1:
@@ -2840,7 +2835,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-linux-x64-gnu@1.24.1:
@@ -2849,7 +2843,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-linux-x64-musl@1.24.1:
@@ -2858,7 +2851,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss-win32-x64-msvc@1.24.1:
@@ -2867,7 +2859,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /lightningcss@1.24.1:
@@ -2885,7 +2876,6 @@ packages:
       lightningcss-linux-x64-gnu: 1.24.1
       lightningcss-linux-x64-musl: 1.24.1
       lightningcss-win32-x64-msvc: 1.24.1
-    dev: true
 
   /loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
@@ -3669,16 +3659,19 @@ packages:
       '@babel/runtime': 7.24.4
     dev: false
 
-  /tailwindcss-animate@1.0.7(tailwindcss@4.0.0-alpha.14):
+  /tailwindcss-animate@1.0.7(tailwindcss@0.0.0-development.5):
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
-      tailwindcss: 4.0.0-alpha.14
+      tailwindcss: 0.0.0-development.5
     dev: false
 
-  /tailwindcss@4.0.0-alpha.14:
-    resolution: {integrity: sha512-7qAhQPrsWyaaDk0IjOEhTEdgDWsN0MjB3kk38DxK5vXqPJ7C57FYlARA6vrE36WL0K/mYdAA54vWJbWbDfoVcQ==}
+  /tailwindcss@0.0.0-development.5:
+    resolution: {integrity: sha512-LbRQ/edYJZUH08qHvu55zn3uUDX04abD5pYG43yhQLgHcn3yiIDlo8auqb3Z350+3c0AdYuJBrxnF9yI36GTLg==}
+    hasBin: true
+    dependencies:
+      lightningcss: 1.24.1
 
   /tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
@@ -3823,6 +3816,11 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
+  /types-react-dom@19.0.0-alpha.5:
+    resolution: {integrity: sha512-dE5cM6pWYwTYd8AMTWBD5moRYzEqxySg96SKDxzajx5cHmeeC/Q5r1KjtIMlFs9IBIa8tEsJRfLh2UYF2NiIdw==}
+    dependencies:
+      '@types/react': 18.3.1
+
   /types-react@19.0.0-alpha.5:
     resolution: {integrity: sha512-xZD+lxZWLeTPRAfYIC2CYO+cbkrVg1Jismo7gGC6kzEjYk+ixz0E8rXJ371Dbqo2eHjmJYjwszV+eOa3DiHqUg==}
     dependencies:
@@ -3898,8 +3896,8 @@ packages:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
     dev: true
 
-  /vercel@34.1.7:
-    resolution: {integrity: sha512-E9JmCYcFXViLfYN6O1C3QDJdxoy3TBN2nIGwtRcvfCjPfgq0CYlwbfZYoeKWNrwlxFHVGMZgxpsqqmr5yna3Hg==}
+  /vercel@34.1.8:
+    resolution: {integrity: sha512-PmT+fgTmwUvT8ZV1BvbMTpxossdLHaKJxLcaepBqAWwOdeM0TR8bVjXTpH/HEmhGL2RNhn8a2l8/cjZNVPfsJw==}
     engines: {node: '>= 16'}
     hasBin: true
     dependencies:
@@ -3907,13 +3905,13 @@ packages:
       '@vercel/fun': 1.1.0
       '@vercel/go': 3.1.1
       '@vercel/hydrogen': 1.0.2
-      '@vercel/next': 4.2.6
+      '@vercel/next': 4.2.7
       '@vercel/node': 3.0.28
       '@vercel/python': 4.2.0
       '@vercel/redwood': 2.0.8
       '@vercel/remix-builder': 2.1.5
       '@vercel/ruby': 2.1.0
-      '@vercel/static-build': 2.5.2
+      '@vercel/static-build': 2.5.3
       chokidar: 3.3.1
     transitivePeerDependencies:
       - '@swc/core'
