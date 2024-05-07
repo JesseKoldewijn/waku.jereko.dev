@@ -1,7 +1,12 @@
 import { type UserConfig, defineConfig } from "vite";
+import removeConsole from "vite-plugin-remove-console";
 
 const config: UserConfig = {
-  plugins: [],
+  plugins: [
+    removeConsole({
+      externalValue: ["prod:"],
+    }),
+  ],
   resolve: {
     alias: {
       "@": "/src",
@@ -14,6 +19,7 @@ const config: UserConfig = {
     minify: "esbuild",
     rollupOptions: {
       onLog: onLog as any,
+      treeshake: true,
       output: {
         manualChunks,
       },
