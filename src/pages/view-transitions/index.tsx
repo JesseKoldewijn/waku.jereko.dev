@@ -4,7 +4,7 @@ import ViewTransitionsDemo from "@/components/viewTransitions/demo";
 
 const Page = () => {
   return (
-    <div className="demo-box flex flex-col gap-4 lg:items-center">
+    <div className="flex flex-col gap-4 lg:items-center">
       <h2 className="text-xl font-semibold lg:mx-auto">View Transitions</h2>
       <section className="flex max-w-md flex-col gap-4 text-balance pb-1 lg:text-center">
         <div className="flex flex-col gap-1">

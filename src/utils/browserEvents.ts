@@ -1,14 +1,7 @@
 "use client";
 
-/**
- * Copied https://github.com/shuding/next-view-transitions/blob/b1e1211e95f36eaca60f7540b54d220773f8921d/src/browser-native-events.ts
- */
 import { use, useEffect, useRef, useSyncExternalStore } from "react";
 import { useRouter_UNSTABLE as useRouter } from "waku";
-
-// TODO: This implementation might not be complete when there are nested
-// Suspense boundaries during a route transition. But it should work fine for
-// the most common use cases.
 
 // This is a global variable to keep track of the view transition state.
 let currentViewTransition:
@@ -57,7 +50,7 @@ export function useBrowserNativeTransitions() {
       return () => {
         // TODO: Intentionally not cleaning up the event listener, otherwise the
         // listener won't be registered again. This might be something related
-        // to the `use` call. We should investigate this further.
+        // to the `use` call. Should be investigated further.
       };
     },
     () => currentViewTransition,

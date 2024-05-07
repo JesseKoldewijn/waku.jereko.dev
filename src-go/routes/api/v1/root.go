@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"io"
 	"net/http"
 	"time"
 
@@ -23,12 +24,18 @@ func RouteGroupV1(router *gin.RouterGroup) {
 			})
 		})
 		v1.POST("/echo", func(c *gin.Context) {
-			var body map[string]interface{}
-			c.BindJSON(&body)
+			// Get the request body
+			jsonData, err := io.ReadAll(c.Request.Body)
+			if err != nil {
+				// Handle error
+				c.JSON(http.StatusInternalServerError, gin.H{
+					"message": "Error reading request body!",
+				})
+			}
 
 			c.JSON(http.StatusOK, gin.H{
 				"message": "Echoing the request body!",
-				"body":    body,
+				"body":    string(jsonData),
 			})
 		})
 	}

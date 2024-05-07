@@ -1,5 +1,6 @@
 import { getEnv } from "waku";
 
+import FormActionDemo from "@/components/actions/formAction";
 import ActionTransitionDemo from "@/components/actions/transition";
 import { Link } from "@/components/core/Link";
 import { Button } from "@/components/ui/button";
@@ -15,13 +16,24 @@ const Page = () => {
         : `https://${vercelUrl}`
       : undefined;
 
-  const remoteUrl = actualUrl ? `${actualUrl}/api/v1/timestamp` : undefined;
+  const remoteUrlTs = actualUrl ? `${actualUrl}/api/v1/timestamp` : undefined;
+  const remoteUrlEcho = actualUrl ? `${actualUrl}/api/v1/echo` : undefined;
+
   return (
-    <div className="demo-box flex w-full flex-col items-center gap-4">
-      <h2 className="mx-auto text-xl font-semibold">View Transitions</h2>
-      <section className="flex max-w-md flex-col gap-4 text-balance pb-1 text-center">
-        <ActionTransitionDemo remoteUrl={remoteUrl} />
-      </section>
+    <div className="flex w-full flex-col items-center gap-4">
+      <div className="flex w-full flex-col items-center gap-4">
+        <h2 className="mx-auto text-xl font-semibold">Action Transition</h2>
+        <section className="flex max-w-md flex-col gap-4 text-balance pb-1 text-center">
+          <ActionTransitionDemo remoteUrl={remoteUrlTs} />
+        </section>
+      </div>
+      <div className="flex w-full flex-col items-center gap-4">
+        <h2 className="mx-auto text-xl font-semibold">Action Transition</h2>
+        <section className="flex max-w-md flex-col gap-4 text-balance pb-1 text-center">
+          <FormActionDemo remoteUrl={remoteUrlEcho} />
+        </section>
+      </div>
+
       <Button asChild className="mx-auto w-max">
         <Link to="/" className="block">
           Go back to home

@@ -66,6 +66,7 @@ const ActionTransitionDemo = ({ remoteUrl }: ActionTransitionDemoProps) => {
           "max-w-max",
           timeoutEnabled && "!animate-pulse ease-linear",
         )}
+        size="sm"
       >
         Update
       </Button>
