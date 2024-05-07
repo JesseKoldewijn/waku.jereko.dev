@@ -17,10 +17,10 @@ const Page = () => {
       : undefined;
 
   const remoteUrlTs = actualUrl
-    ? `${!actualUrl.includes("vercel.app") && actualUrl}/api/v1/timestamp`
+    ? `${!actualUrl.includes("vercel.app") ? actualUrl : ""}/api/v1/timestamp`
     : undefined;
   const remoteUrlEcho = actualUrl
-    ? `${!actualUrl.includes("vercel.app") && actualUrl}/api/v1/echo`
+    ? `${!actualUrl.includes("vercel.app") ? actualUrl : ""}/api/v1/echo`
     : undefined;
 
   return (

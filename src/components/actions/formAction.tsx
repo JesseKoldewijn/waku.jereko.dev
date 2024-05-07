@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 
 import { Button } from "../ui/button";
@@ -17,6 +17,9 @@ interface FormActionData {
 }
 
 const FormActionDemo = ({ remoteUrl }: FormActionDemoProps) => {
+  const buttonElement = useRef<HTMLButtonElement | null>(null);
+  const [inputLength, setInputLength] = useState<number>(0);
+
   const { pending } = useFormStatus();
   const [data, submitAction, isPending] = useActionState<
     FormActionData,
@@ -69,9 +72,17 @@ const FormActionDemo = ({ remoteUrl }: FormActionDemoProps) => {
           id="name"
           name="name"
           placeholder="Type a message here..."
+          onChange={(e) => {
+            setInputLength(e.target.value.length);
+          }}
         />
       </div>
-      <Button type="submit" disabled={isPending || pending} size="sm">
+      <Button
+        ref={buttonElement}
+        type="submit"
+        disabled={isPending || pending || inputLength < 2}
+        size="sm"
+      >
         Update
       </Button>
       {(isPending || pending) && <span>Submitting...</span>}
