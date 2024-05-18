@@ -1,12 +1,7 @@
 import { type UserConfig, defineConfig } from "vite";
-import removeConsole from "vite-plugin-remove-console";
 
 const config: UserConfig = {
-  plugins: [
-    removeConsole({
-      externalValue: ["prod:"],
-    }),
-  ],
+  plugins: [],
   resolve: {
     alias: {
       "@": "/src",

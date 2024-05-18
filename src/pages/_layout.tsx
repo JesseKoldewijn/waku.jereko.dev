@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, StrictMode } from "react";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -17,24 +17,26 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
   const data = await getData();
 
   return (
-    <ViewTransitions>
-      <div
-        data-app-root
-        className={cn(
-          "bg-background text-foreground inset-0 h-full min-h-screen w-full",
-        )}
-      >
-        <link rel="icon" type="image/png" href={data.icon} />
-        <Fonts />
-        <Meta tree={children} desc={data?.description} />
+    <StrictMode>
+      <ViewTransitions>
+        <div
+          data-app-root
+          className={cn(
+            "bg-background text-foreground inset-0 h-full min-h-screen w-full",
+          )}
+        >
+          <link rel="icon" type="image/png" href={data.icon} />
+          <Fonts />
+          <Meta tree={children} desc={data?.description} />
 
-        <Header />
-        <div className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
-          {children}
+          <Header />
+          <div className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
+            {children}
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </ViewTransitions>
+      </ViewTransitions>
+    </StrictMode>
   );
 };
 export default RootLayout;
