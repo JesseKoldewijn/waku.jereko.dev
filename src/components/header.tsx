@@ -1,11 +1,18 @@
+import { Suspense, lazy } from "react";
+
 import { getContext } from "waku/server";
 
 import { Theme } from "@/types/theme";
 
 import { Link } from "./core/Link";
-import DesktopNavigation from "./desktop-navigation";
-import MobileNavigation from "./mobile-navigation";
 import ThemeToggle from "./theme/themeToggle";
+
+const MobileNavigation = lazy(() =>
+  import("./mobile-navigation").then((mod) => ({ default: mod.default })),
+);
+const DesktopNavigation = lazy(() =>
+  import("./desktop-navigation").then((mod) => ({ default: mod.default })),
+);
 
 export const Header = () => {
   const ctx = getContext<{ theme: Theme }>();
@@ -15,23 +22,28 @@ export const Header = () => {
       <h2 className="text-lg font-bold tracking-tight">
         <Link to="/">Waku Jereko</Link>
       </h2>
-      <nav
-        aria-roledescription="desktop navigation"
-        className="pointer-events-none hidden gap-4 lg:pointer-events-auto lg:flex"
-      >
-        <DesktopNavigation />
-      </nav>
+
+      <Suspense fallback={null}>
+        <nav
+          aria-roledescription="desktop navigation"
+          className="pointer-events-none hidden gap-4 sm:flex lg:pointer-events-auto"
+        >
+          <DesktopNavigation />
+        </nav>
+      </Suspense>
 
       <div className="ml-auto">
         <ThemeToggle initialTheme={ctx?.theme} />
       </div>
 
-      <nav
-        aria-roledescription="mobile navigation"
-        className="pointer-events-auto gap-4 lg:pointer-events-none lg:hidden"
-      >
-        <MobileNavigation />
-      </nav>
+      <Suspense fallback={null}>
+        <nav
+          aria-roledescription="mobile navigation"
+          className="pointer-events-auto gap-4 sm:hidden lg:pointer-events-none"
+        >
+          <MobileNavigation />
+        </nav>
+      </Suspense>
     </header>
   );
 };

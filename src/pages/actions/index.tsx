@@ -38,7 +38,7 @@ const Page = () => {
         </section>
       </div>
 
-      <Button asChild className="mx-auto w-max">
+      <Button className="mx-auto w-max">
         <Link to="/" className="block">
           Go back to home
         </Link>

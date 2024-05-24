@@ -1,5 +1,3 @@
-"use client";
-
 import { MenuIcon } from "lucide-react";
 
 import { Button } from "./ui/button";
@@ -13,13 +11,6 @@ import {
 } from "./ui/dropdown-menu";
 
 const MobileNavigation = () => {
-  if (typeof window === "undefined")
-    return (
-      <Button size="sm">
-        <MenuIcon size={20} />
-      </Button>
-    );
-
   return (
     <DropdownMenu>
       <Button size="sm" asChild>

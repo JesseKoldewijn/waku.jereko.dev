@@ -60,7 +60,7 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
       />
       <Label
         htmlFor="theme-toggle"
-        className="hidden lg:flex lg:items-center lg:justify-center"
+        className="hidden sm:flex sm:items-center sm:justify-center"
       >
         {theme}-mode
       </Label>
