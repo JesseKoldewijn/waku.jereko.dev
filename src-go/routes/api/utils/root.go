@@ -14,7 +14,8 @@ func RouteGroupUtils(router *gin.RouterGroup) {
 		utils.GET("/ip", func(c *gin.Context) {
 			ip := c.ClientIP()
 			ref := c.Request.Header.Get("Referer")
-			requestIp := c.Request.Header.Get("X-Real-IP")
+
+			requestIp := c.Request.Header.Get("X-Request-IP")
 
 			uaString := c.Request.Header.Get("User-Agent")
 			uaParsed := useragent.Parse(uaString)
