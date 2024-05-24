@@ -26,7 +26,7 @@ export const Header = () => {
       <Suspense fallback={null}>
         <nav
           aria-roledescription="desktop navigation"
-          className="pointer-events-none hidden gap-4 sm:flex lg:pointer-events-auto"
+          className="pointer-events-none hidden gap-4 sm:pointer-events-auto sm:flex"
         >
           <DesktopNavigation />
         </nav>
@@ -39,7 +39,7 @@ export const Header = () => {
       <Suspense fallback={null}>
         <nav
           aria-roledescription="mobile navigation"
-          className="pointer-events-auto gap-4 sm:hidden lg:pointer-events-none"
+          className="pointer-events-auto gap-4 sm:pointer-events-none sm:hidden"
         >
           <MobileNavigation />
         </nav>

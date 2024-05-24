@@ -1,6 +1,7 @@
 "use client";
 
 import cookies from "cookie";
+import { LucideMoon, LucideSun } from "lucide-react";
 import { useRef, useState } from "react";
 
 import { themeCookieKey } from "@/middleware/cookie";
@@ -21,10 +22,6 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
     const isChecked = ref.current?.dataset.state === "checked";
 
     const newTheme = isChecked ? "light" : "dark";
-    const isStuck =
-      (newTheme == initialTheme ? true : false) &&
-      isChecked &&
-      initialTheme == "dark";
 
     setTheme(newTheme);
 
@@ -49,7 +46,7 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
   };
 
   return (
-    <div className="flex items-center space-x-2 [view-transition-name:theme_toggle]">
+    <div className="flex flex-row-reverse items-center gap-2 space-x-2 [view-transition-name:theme_toggle] sm:flex-row">
       <Switch
         id="theme-toggle"
         ref={ref}
@@ -58,15 +55,16 @@ const ThemeToggle = ({ initialTheme = "dark" }: ThemeToggleProps) => {
         aria-labelledby="theme-toggle-label"
         role="switch"
       />
-      <Label
-        htmlFor="theme-toggle"
-        className="hidden sm:flex sm:items-center sm:justify-center"
-      >
-        {theme}-mode
+      <Label id="theme-toggle-label" htmlFor="theme-toggle">
+        <span className="sr-only">{theme}-mode</span>
+        <span aria-hidden="true">
+          {theme === "dark" ? (
+            <LucideMoon height={20} />
+          ) : (
+            <LucideSun height={20} />
+          )}
+        </span>
       </Label>
-      <span id="theme-toggle-label" className="sr-only">
-        Toggle theme
-      </span>
     </div>
   );
 };
