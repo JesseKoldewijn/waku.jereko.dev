@@ -2,6 +2,7 @@ import { type ReactNode, StrictMode } from "react";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import QueryProvider from "@/providers/QueryClient";
 import { ViewTransitions } from "@/providers/ViewTransitions";
 import Fonts from "@/server/core/fonts";
 import Meta from "@/server/core/meta";
@@ -18,24 +19,26 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 
   return (
     <StrictMode>
-      <ViewTransitions>
-        <div
-          data-app-root
-          className={cn(
-            "bg-background text-foreground inset-0 h-full min-h-screen w-full",
-          )}
-        >
-          <link rel="icon" type="image/png" href={data.icon} />
-          <Fonts />
-          <Meta tree={children} desc={data?.description} />
+      <QueryProvider>
+        <ViewTransitions>
+          <div
+            data-app-root
+            className={cn(
+              "bg-background text-foreground inset-0 h-full min-h-screen w-full",
+            )}
+          >
+            <link rel="icon" type="image/png" href={data.icon} />
+            <Fonts />
+            <Meta tree={children} desc={data?.description} />
 
-          <Header />
-          <div className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
-            {children}
+            <Header />
+            <div className="m-6 flex items-center lg:m-0 lg:min-h-svh lg:justify-center">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </ViewTransitions>
+        </ViewTransitions>
+      </QueryProvider>
     </StrictMode>
   );
 };

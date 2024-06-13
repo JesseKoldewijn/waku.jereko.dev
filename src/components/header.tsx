@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 
-import { getContext } from "waku/server";
+import { unstable_getCustomContext } from "waku/server";
 
 import { Theme } from "@/types/theme";
 
@@ -15,7 +15,7 @@ const DesktopNavigation = lazy(() =>
 );
 
 export const Header = () => {
-  const ctx = getContext<{ theme: Theme }>();
+  const ctx = unstable_getCustomContext<{ theme: Theme }>();
 
   return (
     <header className="flex w-full items-center gap-4 p-6 lg:fixed lg:top-0 lg:left-0">

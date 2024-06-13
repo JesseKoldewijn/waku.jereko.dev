@@ -14,24 +14,24 @@
     "upgrade:radix": "$npm_execpath install @radix-ui/react-label@next @radix-ui/react-slot@next @radix-ui/react-switch@next @radix-ui/react-dialog@next @radix-ui/react-dropdown-menu@next"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "1.0.6-rc.5",
-    "@radix-ui/react-dropdown-menu": "2.0.7-rc.10",
-    "@radix-ui/react-label": "2.0.3-rc.6",
-    "@radix-ui/react-slot": "1.0.2-rc.11",
-    "@radix-ui/react-switch": "1.0.3-rc.11",
+    "@radix-ui/react-dialog": "1.1.0-rc.8",
+    "@radix-ui/react-dropdown-menu": "2.1.0-rc.6",
+    "@radix-ui/react-label": "2.1.0-rc.6",
+    "@radix-ui/react-slot": "1.1.0-rc.6",
+    "@radix-ui/react-switch": "1.1.0-rc.6",
     "cookie": "^0.6.0",
     "lucide-react": "^0.379.0",
-    "react": "19.0.0-rc-935180c7e0-20240524",
-    "react-dom": "19.0.0-rc-935180c7e0-20240524",
+    "react": "19.0.0-beta-26f2496093-20240514",
+    "react-dom": "19.0.0-beta-26f2496093-20240514",
+    "react-query": "3.39.3",
     "react-server-dom-webpack": "19.0.0-beta-26f2496093-20240514",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "vite-plugin-remove-console": "^2.2.0",
-    "waku": "https://pkg.csb.dev/dai-shi/waku/commit/0ec63c97/waku"
+    "waku": "0.21.0-alpha.2"
   },
   "devDependencies": {
-    "@tailwindcss/oxide": "0.0.0-development.5",
-    "@tailwindcss/postcss": "4.0.0-alpha.15",
+    "@tailwindcss/postcss": "4.0.0-alpha.16",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/cookie": "^0.6.0",
     "@types/js-cookie": "^3.0.6",
@@ -47,11 +47,11 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "4.0.0-alpha.15",
+    "tailwindcss": "4.0.0-alpha.16",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.4.5",
     "vercel": "^34.2.3",
-    "vite": "6.0.0-alpha.17"
+    "vite": "6.0.0-alpha.18"
   },
   "volta": {
     "node": "20.13.1"

@@ -1,7 +1,7 @@
-import { getContext } from "waku/server";
+import { unstable_getCustomContext } from "waku/server";
 
 const Fonts = () => {
-  const ctx = getContext();
+  const ctx = unstable_getCustomContext();
 
   const browser = ctx?.browser as string;
   const ue = ctx?.ue as string;
