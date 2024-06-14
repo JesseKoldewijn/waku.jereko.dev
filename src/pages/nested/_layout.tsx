@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 
-import { getContext } from "waku/server";
+import { unstable_getCustomContext } from "waku/server";
 
 import { Link } from "@/components/core/Link";
 import {
@@ -74,7 +74,7 @@ const NextedLayout = async ({ children }: NestedLayoutProps) => {
 export default NextedLayout;
 
 const getData = () => {
-  const ctx = getContext();
+  const ctx = unstable_getCustomContext();
 
   const hostUrl = ctx?.url as string | undefined;
 
